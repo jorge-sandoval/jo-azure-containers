@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ContainerRepsitory>dotnet-build-microservice</ContainerRepsitory>
+    <ContainerImageTag>1.0.0</ContainerImageTag>
+    <UserSecretsId>94705978-6196-4c01-88b9-578ef818178e</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ContainerPort Include="80" Type="tcp"></ContainerPort>
+    <ContainerEnvironmentVariable Include="LOGGER_VERBOSITY" Value="Trace"></ContainerEnvironmentVariable>
+    <ContainerEnvironmentVariable Include="ASPNETCORE_ENVIRONMENT" Value="Production"></ContainerEnvironmentVariable>
+    <ContainerLabel Include="azure" Value="net-build-container"></ContainerLabel>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+</Project>
