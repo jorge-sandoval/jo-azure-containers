@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  netbuildmicroservice.api:
+    image: ${DOCKER_REGISTRY-}netbuildmicroserviceapi
+    build:
+      context: .
+      dockerfile: NETBuildMicroservice.API/Dockerfile
+
+  demomicroservice.api:
+    image: ${DOCKER_REGISTRY-}demomicroserviceapi
+    build:
+      context: .
+      dockerfile: DemoMicroservice.API/Dockerfile
+

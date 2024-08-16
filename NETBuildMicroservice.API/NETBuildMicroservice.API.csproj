@@ -8,6 +8,7 @@
     <ContainerImageTag>1.0.0</ContainerImageTag>
     <UserSecretsId>94705978-6196-4c01-88b9-578ef818178e</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
